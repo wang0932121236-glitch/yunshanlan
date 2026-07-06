@@ -694,17 +694,17 @@ export default function Home() {
           src="/hero-banner.png"
           alt=""
           className="w-full block"
-          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center bottom', height: 'calc(100svh - 64px - 160px)' }}
+          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center bottom', height: 'calc(100svh - 64px - 190px)' }}
         />
-        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-1.5 pb-6 px-6">
+        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-1.5 pb-5 px-6">
           <div className="flex flex-col items-center gap-1.5">
-            <Link to="/routes" className="rounded-full px-5 py-2.5 text-[11px] font-semibold text-stone-800 border-2 border-b8956a flex items-center gap-1.5 hover:bg-amber-50 transition-all duration-200 shadow-md" style={{ background: 'rgba(252,250,247,0.92)' }}>
-              Explore Routes <ArrowRight size={10} />
+            <Link to="/routes" className="rounded-full px-4 py-2 text-[10px] font-semibold text-stone-800 border-2 border-b8956a flex items-center gap-1 hover:bg-amber-50 transition-all duration-200 shadow-md" style={{ background: 'rgba(252,250,247,0.92)' }}>
+              Explore Routes <ArrowRight size={9} />
             </Link>
-            <Link to="/destinations" className="rounded-full px-5 py-2.5 text-[11px] font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
+            <Link to="/destinations" className="rounded-full px-4 py-2 text-[10px] font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
               View Destinations
             </Link>
-            <Link to="/experiences" className="rounded-full px-5 py-2.5 text-[11px] font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
+            <Link to="/experiences" className="rounded-full px-4 py-2 text-[10px] font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
               Experiences
             </Link>
           </div>
