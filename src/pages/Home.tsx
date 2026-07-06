@@ -688,31 +688,28 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Mobile: image above, buttons below — separate from desktop, no parent overflow clipping */}
-      <div className="md:hidden flex flex-col" style={{ height: '100svh' }}>
-        {/* Image — full width, aspect-ratio preserved, no裁切 */}
-        <div className="relative w-full" style={{ height: '60svh' }}>
-          <img
-            src="/hero-banner.png"
-            alt=""
-            className="absolute inset-0 w-full h-full"
-            style={{ display: 'block', objectFit: 'contain', objectPosition: 'center bottom' }}
-          />
-        </div>
-        {/* Buttons below the image */}
-        <div className="flex-1 flex flex-col items-center justify-center gap-4 px-6" style={{ background: '#fafaf8' }}>
-          <div className="flex flex-col items-center gap-3">
-            <Link to="/routes" className="rounded-full px-10 py-4 text-sm font-semibold text-stone-800 border-2 border-b8956a flex items-center gap-2 hover:bg-amber-50 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.95)' }}>
-              Explore Routes <ArrowRight size={14} />
+      {/* Mobile: image full screen, buttons overlaid at bottom of image */}
+      <div className="md:hidden relative w-full overflow-hidden" style={{ height: '100svh' }}>
+        <img
+          src="/hero-banner.png"
+          alt=""
+          className="absolute inset-0 w-full h-full"
+          style={{ display: 'block', objectFit: 'contain', objectPosition: 'center bottom' }}
+        />
+        {/* Buttons overlaid at bottom of image */}
+        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-2 pb-10 px-6">
+          <div className="flex flex-col items-center gap-2">
+            <Link to="/routes" className="rounded-full px-7 py-3 text-xs font-semibold text-stone-800 border-2 border-b8956a flex items-center gap-1.5 hover:bg-amber-50 transition-all duration-200 shadow-md" style={{ background: 'rgba(252,250,247,0.92)' }}>
+              Explore Routes <ArrowRight size={11} />
             </Link>
-            <Link to="/destinations" className="rounded-full px-10 py-4 text-sm font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200" style={{ background: 'rgba(252,250,247,0.95)' }}>
+            <Link to="/destinations" className="rounded-full px-7 py-3 text-xs font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
               View Destinations
             </Link>
-            <Link to="/experiences" className="rounded-full px-10 py-4 text-sm font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200" style={{ background: 'rgba(252,250,247,0.95)' }}>
+            <Link to="/experiences" className="rounded-full px-7 py-3 text-xs font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
               Experiences
             </Link>
           </div>
-          <p className="text-stone-400 text-[10px] font-body tracking-wider mt-1">Scroll down to discover more ↓</p>
+          <p className="text-white/70 text-[9px] font-body tracking-wider mt-1 drop-shadow">Scroll down to discover more ↓</p>
         </div>
       </div>
 
