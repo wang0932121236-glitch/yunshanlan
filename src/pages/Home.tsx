@@ -664,17 +664,15 @@ export default function Home() {
   return (
     <div>
       {/* ── Top Banner ── */}
-      {/* Desktop: full-screen overlay with buttons on top | Mobile: image + buttons below separately */}
-      <div className="relative w-full overflow-hidden" style={{ height: '100svh' }}>
-        {/* Desktop: full banner image with overlay buttons */}
+      {/* Desktop: full-screen overlay with buttons on top */}
+      <div className="hidden md:block relative w-full overflow-hidden" style={{ height: '100svh' }}>
         <img
           src="/hero-banner.png"
           alt=""
-          className="hidden md:block absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full"
           style={{ display: 'block', objectFit: 'cover', objectPosition: 'center' }}
         />
-        {/* Desktop overlay buttons */}
-        <div className="hidden md:flex absolute bottom-0 left-0 right-0 flex flex-col items-center gap-4 pb-16">
+        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-4 pb-16">
           <div className="flex flex-wrap justify-center gap-3">
             <Link to="/routes" className="glass-panel rounded-full px-10 py-4 text-sm font-semibold text-stone-800 flex items-center gap-2 hover:bg-rgba(230,227,222,0.65)/40 transition-all duration-200">
               Explore Routes <ArrowRight size={14} />
@@ -688,33 +686,33 @@ export default function Home() {
           </div>
           <p className="text-stone-400 text-xs font-body tracking-wider">Scroll down to discover more</p>
         </div>
+      </div>
 
-        {/* Mobile: image above, buttons below */}
-        <div className="md:hidden flex flex-col" style={{ height: '100svh' }}>
-          {/* Image — full width, aspect-ratio preserved, no裁切 */}
-          <div className="relative w-full overflow-hidden flex-shrink-0" style={{ height: '60svh' }}>
-            <img
-              src="/hero-banner.png"
-              alt=""
-              className="absolute inset-0 w-full h-full"
-              style={{ display: 'block', objectFit: 'contain', objectPosition: 'center bottom' }}
-            />
+      {/* Mobile: image above, buttons below — separate from desktop, no parent overflow clipping */}
+      <div className="md:hidden flex flex-col" style={{ height: '100svh' }}>
+        {/* Image — full width, aspect-ratio preserved, no裁切 */}
+        <div className="relative w-full" style={{ height: '60svh' }}>
+          <img
+            src="/hero-banner.png"
+            alt=""
+            className="absolute inset-0 w-full h-full"
+            style={{ display: 'block', objectFit: 'contain', objectPosition: 'center bottom' }}
+          />
+        </div>
+        {/* Buttons below the image */}
+        <div className="flex-1 flex flex-col items-center justify-center gap-3 px-6" style={{ background: '#fafaf8' }}>
+          <div className="flex flex-col items-center gap-2">
+            <Link to="/routes" className="rounded-full px-8 py-3.5 text-sm font-semibold text-stone-800 border border-b8956a/40 flex items-center gap-2 hover:bg-stone-100 transition-all duration-200">
+              Explore Routes <ArrowRight size={13} />
+            </Link>
+            <Link to="/destinations" className="rounded-full px-8 py-3.5 text-sm font-semibold text-stone-600 hover:text-stone-800 transition-all duration-200">
+              View Destinations
+            </Link>
+            <Link to="/experiences" className="rounded-full px-8 py-3.5 text-sm font-semibold text-stone-600 hover:text-stone-800 transition-all duration-200">
+              Experiences
+            </Link>
           </div>
-          {/* Buttons below the image */}
-          <div className="flex-1 flex flex-col items-center justify-center gap-3 px-6" style={{ background: '#fafaf8' }}>
-            <div className="flex flex-col items-center gap-2">
-              <Link to="/routes" className="rounded-full px-8 py-3.5 text-sm font-semibold text-stone-800 border border-b8956a/40 flex items-center gap-2 hover:bg-stone-100 transition-all duration-200">
-                Explore Routes <ArrowRight size={13} />
-              </Link>
-              <Link to="/destinations" className="rounded-full px-8 py-3.5 text-sm font-semibold text-stone-600 hover:text-stone-800 transition-all duration-200">
-                View Destinations
-              </Link>
-              <Link to="/experiences" className="rounded-full px-8 py-3.5 text-sm font-semibold text-stone-600 hover:text-stone-800 transition-all duration-200">
-                Experiences
-              </Link>
-            </div>
-            <p className="text-stone-400 text-[10px] font-body tracking-wider mt-1">Scroll down to discover more ↓</p>
-          </div>
+          <p className="text-stone-400 text-[10px] font-body tracking-wider mt-1">Scroll down to discover more ↓</p>
         </div>
       </div>
 
