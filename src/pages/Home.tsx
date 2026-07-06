@@ -700,15 +700,15 @@ export default function Home() {
           />
         </div>
         {/* Buttons below the image */}
-        <div className="flex-1 flex flex-col items-center justify-center gap-3 px-6" style={{ background: '#fafaf8' }}>
-          <div className="flex flex-col items-center gap-2">
-            <Link to="/routes" className="rounded-full px-8 py-3.5 text-sm font-semibold text-stone-800 border border-b8956a/40 flex items-center gap-2 hover:bg-stone-100 transition-all duration-200">
-              Explore Routes <ArrowRight size={13} />
+        <div className="flex-1 flex flex-col items-center justify-center gap-4 px-6" style={{ background: '#fafaf8' }}>
+          <div className="flex flex-col items-center gap-3">
+            <Link to="/routes" className="rounded-full px-10 py-4 text-sm font-semibold text-stone-800 border-2 border-b8956a flex items-center gap-2 hover:bg-amber-50 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.95)' }}>
+              Explore Routes <ArrowRight size={14} />
             </Link>
-            <Link to="/destinations" className="rounded-full px-8 py-3.5 text-sm font-semibold text-stone-600 hover:text-stone-800 transition-all duration-200">
+            <Link to="/destinations" className="rounded-full px-10 py-4 text-sm font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200" style={{ background: 'rgba(252,250,247,0.95)' }}>
               View Destinations
             </Link>
-            <Link to="/experiences" className="rounded-full px-8 py-3.5 text-sm font-semibold text-stone-600 hover:text-stone-800 transition-all duration-200">
+            <Link to="/experiences" className="rounded-full px-10 py-4 text-sm font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200" style={{ background: 'rgba(252,250,247,0.95)' }}>
               Experiences
             </Link>
           </div>
