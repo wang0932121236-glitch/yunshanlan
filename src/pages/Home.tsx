@@ -694,7 +694,7 @@ export default function Home() {
           src="/hero-banner.png"
           alt=""
           className="w-full block"
-          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center bottom', height: 'calc(100svh - 64px - 100px)' }}
+          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center bottom', height: 'calc(100svh - 64px - 130px)' }}
         />
         <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-1.5 pb-6 px-6">
           <div className="flex flex-col items-center gap-1.5">
