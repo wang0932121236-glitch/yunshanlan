@@ -694,21 +694,21 @@ export default function Home() {
           src="/hero-banner.png"
           alt=""
           className="w-full block"
-          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center bottom', height: 'calc(100svh - 64px - 190px)' }}
+          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center bottom', height: 'calc(100svh - 64px - 220px)' }}
         />
-        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-1.5 pb-5 px-6">
-          <div className="flex flex-col items-center gap-1.5">
-            <Link to="/routes" className="rounded-full px-4 py-2 text-[10px] font-semibold text-stone-800 border-2 border-b8956a flex items-center gap-1 hover:bg-amber-50 transition-all duration-200 shadow-md" style={{ background: 'rgba(252,250,247,0.92)' }}>
-              Explore Routes <ArrowRight size={9} />
+        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-1 pb-4 px-6">
+          <div className="flex flex-col items-center gap-1">
+            <Link to="/routes" className="rounded-full px-3 py-1.5 text-[9px] font-semibold text-stone-800 border-2 border-b8956a flex items-center gap-1 hover:bg-amber-50 transition-all duration-200 shadow-md" style={{ background: 'rgba(252,250,247,0.92)' }}>
+              Explore Routes <ArrowRight size={8} />
             </Link>
-            <Link to="/destinations" className="rounded-full px-4 py-2 text-[10px] font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
+            <Link to="/destinations" className="rounded-full px-3 py-1.5 text-[9px] font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
               View Destinations
             </Link>
-            <Link to="/experiences" className="rounded-full px-4 py-2 text-[10px] font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
+            <Link to="/experiences" className="rounded-full px-3 py-1.5 text-[9px] font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
               Experiences
             </Link>
           </div>
-          <p className="text-white/60 text-[8px] font-body tracking-wider mt-0.5 drop-shadow">Scroll down to discover more ↓</p>
+          <p className="text-white/60 text-[7px] font-body tracking-wider mt-0.5 drop-shadow">Scroll down to discover more ↓</p>
         </div>
       </div>
 
