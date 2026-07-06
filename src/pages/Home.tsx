@@ -668,33 +668,33 @@ export default function Home() {
         <img
           src="/hero-banner.png"
           alt=""
-          className="absolute inset-0 w-full"
-          style={{ display: 'block', height: '100%', objectFit: 'contain', objectPosition: 'center bottom' }}
+          className="absolute inset-0 w-full h-full"
+          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center' }}
         />
-        {/* Bottom overlay with CTA buttons */}
-        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-4 pb-16">
-          <div className="flex flex-wrap justify-center gap-3">
+        {/* Bottom overlay with CTA buttons — glass style, doesn't block the image */}
+        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-3 pb-14">
+          <div className="flex flex-wrap justify-center gap-2">
             <Link
               to="/routes"
-              className="glass-panel rounded-full px-10 py-4 text-sm font-semibold text-stone-800 flex items-center gap-2 hover:bg-rgba(230,227,222,0.65)/40 transition-all duration-200"
+              className="rounded-full px-6 py-3 text-xs font-semibold text-white flex items-center gap-2 border border-white/30 backdrop-blur-sm bg-white/10 hover:bg-white/20 transition-all duration-200"
             >
               Explore Routes
-              <ArrowRight size={14} />
+              <ArrowRight size={12} />
             </Link>
             <Link
               to="/destinations"
-              className="glass-panel rounded-full px-10 py-4 text-sm font-semibold text-stone-700 hover:bg-rgba(230,227,222,0.65)/40 transition-all duration-200"
+              className="rounded-full px-6 py-3 text-xs font-semibold text-white border border-white/30 backdrop-blur-sm bg-white/10 hover:bg-white/20 transition-all duration-200"
             >
               View Destinations
             </Link>
             <Link
               to="/experiences"
-              className="glass-panel rounded-full px-10 py-4 text-sm font-semibold text-stone-700 hover:bg-rgba(230,227,222,0.65)/40 transition-all duration-200"
+              className="rounded-full px-6 py-3 text-xs font-semibold text-white border border-white/30 backdrop-blur-sm bg-white/10 hover:bg-white/20 transition-all duration-200"
             >
               Experiences
             </Link>
           </div>
-          <p className="text-stone-400 text-xs font-body tracking-wider">Scroll down to discover more</p>
+          <p className="text-white/60 text-[10px] font-body tracking-wider">Scroll down to discover more ↓</p>
         </div>
       </div>
 
