@@ -717,15 +717,33 @@ export default function Home() {
       <div className="relative w-full overflow-hidden" style={{ background: '#fafaf8' }}>
 
         {/* Mobile: stacked layout */}
-        <div className="md:hidden flex flex-col">
-          {/* GIF — full width, no black bars */}
-          <div className="w-full" style={{ background: '#0a0a0a' }}>
-            <img
-              src={POSTER_BG}
-              alt=""
-              className="w-full block"
-              style={{ display: 'block', objectFit: 'cover', aspectRatio: '4/3' }}
-            />
+        <div className="md:hidden flex flex-col" style={{ paddingTop: '24px', paddingBottom: '0' }}>
+          {/* GIF — decorative framed */}
+          <div className="mx-4">
+            <div
+              className="relative w-full"
+              style={{
+                padding: '8px',
+                background: 'linear-gradient(135deg, rgba(201,164,88,0.4) 0%, rgba(201,164,88,0.1) 50%, rgba(201,164,88,0.4) 100%)',
+                borderRadius: '20px',
+                boxShadow: '0 12px 40px rgba(140,106,71,0.12), 0 4px 16px rgba(201,164,88,0.10), inset 0 1px 1px rgba(255,255,255,0.6)',
+              }}
+            >
+              {/* Inner dark frame */}
+              <div className="relative overflow-hidden" style={{ borderRadius: '14px', background: '#0a0a0a' }}>
+                <img
+                  src={POSTER_BG}
+                  alt=""
+                  className="block w-full"
+                  style={{ display: 'block', objectFit: 'cover', aspectRatio: '4/3' }}
+                />
+                {/* Corner accents */}
+                <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 rounded-tl-xl" style={{ borderColor: 'rgba(201,164,88,0.5)' }} />
+                <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 rounded-tr-xl" style={{ borderColor: 'rgba(201,164,88,0.5)' }} />
+                <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 rounded-bl-xl" style={{ borderColor: 'rgba(201,164,88,0.5)' }} />
+                <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 rounded-br-xl" style={{ borderColor: 'rgba(201,164,88,0.5)' }} />
+              </div>
+            </div>
           </div>
 
           {/* Text below GIF */}
