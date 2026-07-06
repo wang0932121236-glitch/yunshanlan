@@ -1059,14 +1059,38 @@ export default function Home() {
           </motion.div>
 
           {/* Fan container */}
-          <div className="relative overflow-x-auto pb-4" style={{ perspective: '1200px' }}>
-            {/* Fan blades row */}
+          {/* Mobile: always-show-all horizontal scroll | Desktop: fan with perspective */}
+          <div className="relative overflow-x-auto pb-4">
+            {/* Mobile scroll row (always visible, no fan) */}
+            <div className="flex md:hidden items-end gap-2 px-1 overflow-x-auto snap-x snap-mandatory">
+              {routeImages.map((img) => (
+                <div
+                  key={img.id}
+                  className="flex-shrink-0 snap-start"
+                  style={{ width: 110 }}
+                >
+                  <div
+                    className="relative rounded-xl overflow-hidden shadow-md"
+                    style={{ height: 160 }}
+                  >
+                    <img src={img.src} alt={img.label} className="w-full h-full object-cover" />
+                    <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent">
+                      <p className="font-heading italic text-xs text-white text-center">{img.label}</p>
+                      <p className="text-white/60 text-[9px] font-body text-center">{img.days}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop fan (hidden on mobile) */}
             <div
-              className="flex items-end justify-center gap-0 mx-auto"
+              className="hidden md:flex items-end justify-center gap-0 mx-auto"
               style={{
-                height: routesSpread ? 'min(420px, 65vw)' : 'min(280px, 42vw)',
+                height: routesSpread ? 520 : 340,
                 transformStyle: 'preserve-3d',
-                width: routesSpread ? 'min(980px, 145vw)' : 'min(700px, 105vw)',
+                width: routesSpread ? 1100 : 900,
+                perspective: '1200px',
               }}
             >
               {routeImages.map((img, i) => {
@@ -1093,8 +1117,8 @@ export default function Home() {
                     }}
                     style={{
                       transformOrigin: 'bottom center',
-                      width: routesSpread ? 'clamp(60px, 10vw, 140px)' : 'clamp(56px, 8.5vw, 100px)',
-                      height: routesSpread ? 'clamp(200px, 50vw, 420px)' : 'clamp(150px, 38vw, 280px)',
+                      width: routesSpread ? 140 : 160,
+                      height: routesSpread ? 420 : 320,
                       flexShrink: 0,
                     }}
                   >
@@ -1144,9 +1168,9 @@ export default function Home() {
               })}
             </div>
 
-            {/* Fan ribs decorative lines */}
+            {/* Fan ribs decorative lines (desktop only) */}
             <svg
-              className="absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-700"
+              className="hidden md:block absolute inset-0 w-full pointer-events-none transition-opacity duration-700"
               style={{ opacity: routesSpread ? 0.15 : 0 }}
               viewBox="0 0 1000 520"
               preserveAspectRatio="xMidYMax slice"
@@ -1171,9 +1195,9 @@ export default function Home() {
               })}
             </svg>
 
-            {/* Bottom pivot disc */}
+            {/* Bottom pivot disc (desktop only) */}
             <div
-              className="absolute left-1/2 -translate-x-1/2 rounded-full border-2 border-amber-700/30 transition-all duration-700"
+              className="hidden md:block absolute left-1/2 -translate-x-1/2 rounded-full border-2 border-amber-700/30 transition-all duration-700"
               style={{
                 bottom: -12,
                 width: routesSpread ? 40 : 20,
