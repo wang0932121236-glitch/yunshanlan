@@ -688,15 +688,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Mobile: image full screen, buttons overlaid at bottom of image */}
+      {/* Mobile: image fills screen, buttons overlaid at bottom */}
       <div className="md:hidden relative w-full overflow-hidden" style={{ height: '100svh' }}>
         <img
           src="/hero-banner.png"
           alt=""
           className="absolute inset-0 w-full h-full"
-          style={{ display: 'block', objectFit: 'contain', objectPosition: 'center bottom' }}
+          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center top' }}
         />
-        {/* Buttons overlaid at bottom of image */}
         <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-2 pb-10 px-6">
           <div className="flex flex-col items-center gap-2">
             <Link to="/routes" className="rounded-full px-7 py-3 text-xs font-semibold text-stone-800 border-2 border-b8956a flex items-center gap-1.5 hover:bg-amber-50 transition-all duration-200 shadow-md" style={{ background: 'rgba(252,250,247,0.92)' }}>
