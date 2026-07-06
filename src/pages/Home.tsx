@@ -688,27 +688,27 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Mobile: image fills width fully, height auto, buttons overlaid at bottom of image */}
-      <div className="md:hidden relative w-full overflow-hidden" style={{ background: '#1c1917' }}>
+      {/* Mobile: image starts below navbar, buttons overlaid at bottom */}
+      <div className="md:hidden relative w-full overflow-hidden" style={{ marginTop: '64px', background: '#1c1917' }}>
         <img
           src="/hero-banner.png"
           alt=""
           className="w-full block"
-          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center bottom', maxHeight: 'calc(100svh - 120px)' }}
+          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center bottom', height: 'calc(100svh - 64px - 100px)' }}
         />
-        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-2 pb-8 px-6">
-          <div className="flex flex-col items-center gap-2">
-            <Link to="/routes" className="rounded-full px-7 py-3 text-xs font-semibold text-stone-800 border-2 border-b8956a flex items-center gap-1.5 hover:bg-amber-50 transition-all duration-200 shadow-md" style={{ background: 'rgba(252,250,247,0.92)' }}>
-              Explore Routes <ArrowRight size={11} />
+        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-1.5 pb-6 px-6">
+          <div className="flex flex-col items-center gap-1.5">
+            <Link to="/routes" className="rounded-full px-5 py-2.5 text-[11px] font-semibold text-stone-800 border-2 border-b8956a flex items-center gap-1.5 hover:bg-amber-50 transition-all duration-200 shadow-md" style={{ background: 'rgba(252,250,247,0.92)' }}>
+              Explore Routes <ArrowRight size={10} />
             </Link>
-            <Link to="/destinations" className="rounded-full px-7 py-3 text-xs font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
+            <Link to="/destinations" className="rounded-full px-5 py-2.5 text-[11px] font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
               View Destinations
             </Link>
-            <Link to="/experiences" className="rounded-full px-7 py-3 text-xs font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
+            <Link to="/experiences" className="rounded-full px-5 py-2.5 text-[11px] font-semibold text-stone-700 border border-stone-300 hover:bg-amber-50 hover:text-stone-900 transition-all duration-200 shadow-sm" style={{ background: 'rgba(252,250,247,0.92)' }}>
               Experiences
             </Link>
           </div>
-          <p className="text-white/70 text-[9px] font-body tracking-wider mt-1 drop-shadow">Scroll down to discover more ↓</p>
+          <p className="text-white/60 text-[8px] font-body tracking-wider mt-0.5 drop-shadow">Scroll down to discover more ↓</p>
         </div>
       </div>
 
