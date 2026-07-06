@@ -669,7 +669,7 @@ export default function Home() {
           src="/hero-banner.png"
           alt=""
           className="absolute inset-0 w-full h-full"
-          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center top' }}
+          style={{ display: 'block', objectFit: 'cover', objectPosition: 'center' }}
         />
         {/* Bottom overlay with CTA buttons */}
         <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-4 pb-16">
